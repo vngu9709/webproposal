@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Adobe Creative Cloud</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+  <script src="https://kit.fontawesome.com/c07247ff83.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <!--- HEADER START------------------------->
+  <section>
+    <!--container for header-->
+    <header class="header-container">
+      <!--adobe creative cloud text logo-->
+      <div class="logo">ADOBE CREATIVE CLOUD</div>
+
+      <!--main navigation links (home, plans and pricing, learn, support)-->
+      <div class="main-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#plans">Plans and Pricing</a></li>
+          <li><a href="#about">Learn</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+      </div>
+
+      <!--secondary navigation links (login and sign up) -->
+      <div class="sec-links">
+        <ul>
+          <li><a id="login" href="">Login</a></li>
+          <li><a id="signup" href="createacc.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </header>
+  </section>
+
+  <!---PAGE BODY START ---------------------->
+  <section>
+    <!--container for body -->
+
+    <div class="body-container">
+
+      <!--progress indicator-->
+      <section>
+        <ol class="indicator">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li class="current-step"></li>
+        </ol>
+      </section>
+
+      <!--title and subtitle-->
+      <section>
+      <h1>PAYMENT DETAILS</h1>
+      <h3>You're almost there!</h3>
+    </section>
+
+      <!--container for nothing to pay-->
+      <section>
+      <p id="nothing">Nothing to pay today. You will be charged after 7 Days. Cancel Anytime.</p>
+    </section>
+
+      <!--container for payment - holds text + payment method selections-->
+      <div class="payment-container">
+
+        <h3>Select Payment Method</h3>
+
+       
+          <!--container for paypal-->
+            <div class="method-container" onclick="show();">
+              <p id="method-title">Express Checkout with PayPal</p>
+              <i class="fab fa-cc-paypal"></i>
+              <!--container for paypal pay-->
+              <div id="paypal-button-container"></div>
+            </div>
+
+          <!--container for credit/debit card-->
+            <div class="method-container" onclick="show2();">
+              <p id="method-title">Enter Debit Card/Credit Card</p>
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-amex"></i> 
+              <!--container for pay details-->
+              <div id="paydetails-container">
+                <form action="finished.html">
+
+                  <!--card number input-->
+                  <label for="card-num">Card Number</label>
+                  <input id="card-num" type="number" pattern="[0-9]{16,19}" maxlength="19"
+                    placeholder="8888-8888-8888-8888" autofocus required />
+
+                  <!--card name input-->
+                  <label for="card-name">Name on Card</label>
+                  <input type="text" id="card-name" required />
+
+                  <!-- container for expiration and cvv input-->
+                  <div class="inlineform">
+                    <!--container for expiry label and selections-->
+                    <div class="formcol">
+                      <label for="expiry">Expiry</label>
+                      <!--container for month and year selections-->
+                      <div class="inlineform2">
+                        <select id="move" name="Month">
+                          <option value="">Month</option>
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                        </select>
+                        <select name="Year">
+                          <option value="">Year</option>
+                          <option value="2019">2019</option>
+                          <option value="2020">2020</option>
+                          <option value="2021">2021</option>
+                          <option value="2022">2022</option>
+                          <option value="2023">2023</option>
+                          <option value="2024">2024</option>
+                          <option value="2025">2025</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!--container for CVC label and input-->
+                    <div class="formcol">
+                      <label for="cvc">CVC</label>
+                      <input type="text" name="cvc" placeholder="123" pattern="\\d*" minlength="3" maxlength="4"
+                        required="" />
+                    </div>
+                  </div>
+                  <br>
+                  <form action="finished.html"></form>
+                  <a href="finished.html">
+                      <button id="acc-button" type="submit">
+                          Submit <i id="lock" class="fas fa-lock"></i>
+                      </button>
+                </form>
+              </div>
+          </div>
+      </div>
+
+        <!--norton logo-->
+      <img id="norton" src="norton.png" alt="norton">
+
+              <!--live support-->
+              <section>
+
+                  <button class="support" onclick="openSupport()"> <i class="fas fa-headset"></i>
+                      <p>Need Help? Chat Now</p>
+                  </button>
+  
+                  <div class="support-popup" id="popForm">
+                      <form action="/action_page.php" class="popupform">
+                          <label for="msg">How can we help?</label>
+                          <textarea placeholder="Type message here.." name="msg" required></textarea>
+                          <button type="submit" class="send">Chat Now</button>
+                          <button type="button" class="close" onclick="closeSupport()">Close</button>
+                      </form>
+  
+              </section>
+  
+          </div>
+  
+          <!---FOOTER START ---------------------->
+  
+          <footer class="page-footer">
+              <p>© Copyright 2018. All rights reserved.</p>
+          </footer>
+
+
+</body>
+<script>
+   //function to paypal payment
+  function show() {
+    var x = document.getElementById("paypal-button-container");
+    var y = document.getElementById("paydetails-container");
+    if (x.style.display === "none") {
+      x.style.display = "flex";
+      y.style.display = "none";
+    } else {
+      x.style.display = "none";
+    }
+  }
+   //function to show paydetails
+
+  function show2() {
+    var y = document.getElementById("paydetails-container");
+    var x = document.getElementById("paypal-button-container");
+    if (y.style.display === "none") {
+      y.style.display = "flex";
+      x.style.display = "none";
+
+    } else {
+      y.style.display = "none";
+    }
+  }
+
+   //paypal button
+
+  paypal.Buttons().render('#paypal-button-container');
+
+   //function to open popup support form
+   function openSupport() {
+        document.getElementById("popForm").style.display = "block";
+    }
+    //function to close popup support form
+
+    function closeSupport() {
+        document.getElementById("popForm").style.display = "none";
+    }
+
+
+</script>
+
+</html>
