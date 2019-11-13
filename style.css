@@ -1,0 +1,1032 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+
+* {  /* ALL ELEMENTS */  
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body { /* BODY */ 
+  font-family: "Segoe UI";
+  line-height: 1.5;
+}
+
+h1 { /*HEADING1*/
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 35;
+}
+
+h2 { /*HEADING2*/ 
+  font-size: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #BE2026;
+}
+
+h3 { /*HEADING3*/
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+}
+
+h4 { /*HEADING4*/
+  font-size: 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+}
+
+p { /*{PARAGRAPH*/
+  font-weight: 400;
+  font-size: 12px;
+}
+
+button { /*BUTTON*/
+  cursor: pointer;
+  transition: opacity 0.6s ease; 
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+ul { /*LIST*/ /*remove bullet points for navigation links*/
+  list-style: none; 
+}
+
+a { /*LINKS*/
+  text-decoration: none;
+  font-size: 12px; 
+  font-weight: 500;
+  color: black;
+  transition: opacity 0.6s ease; 
+}
+
+a:hover { /*LINK HOVER*/ /*change opacity when hover over link*/ 
+  opacity: 0.3; 
+}
+
+.header-container { /*HEADER CONTAINER */ /* fix header to top and align content in a row*/ 
+  background-color: #ffffff;
+  width: 100%; 
+  display: flex; 
+  justify-content: row; 
+  flex-wrap: wrap; 
+  align-items: center;  
+  padding: 20px;
+  position: fixed; 
+  margin-top: 0px;
+}
+
+.header-container .logo { /* ADOBE CREATIVE CLOUD LOGO*/
+  font-size: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #BE2026;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.header-container ul{ /*NAVIGATION LINKS*/ /* display links side-by-side*/
+  display: flex;
+  flex-direction: row; 
+}
+
+.header-container .main-links a{  /*MAIN NAVIGATION LINKS*/
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.header-container .main-links{  /*MAIN NAVIGATION LINKS*/ /* grow main-links container so that it takes the most room in the header container*/
+  flex-grow: 1; 
+}
+
+.header-container ul li {  /*MAIN NAVIGATION LINKS*/ /* put space between links */
+  padding-right: 15px;
+}
+
+.header-container .sec-links #login { /*LOGIN LINK*/
+  padding: 5px 10px;
+  font-size: 13px;
+  color: #BE2026;
+  border: 1px solid #BE2026 ;
+  border-radius: 5px;
+  transition: opacity 0.5s ease;
+}
+
+.header-container .sec-links #signup { /*SIGN UP LINK*/
+  padding: 5px 10px;
+  color: white ;
+  background: #BE2026;
+  border: 1px solid #BE2026 ;
+  border-radius: 5px;
+  transition: opacity 0.5s ease;
+  font-size: 13px;
+}
+
+.header-container .main-links #active { /*ACTIVE LINK*/ /* change color and underline if link is active*/
+  padding: 2px;
+  border-bottom: 1px solid;
+  color: #BE2026;
+}
+
+.hp-body-container {  /*HOMEPAGE BODY CONTAINER*//* full width*/
+  width: 100%;
+  background-color:white ;
+  align-items: center;
+  padding: 1px;
+}
+
+.hero-img {  /*HERO IMAGE*/ /*full width background image*/
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background: url(smoke.jpg);
+  background-size: cover;
+  padding: 200px;
+}
+
+.hero-img div { /*HERO IMAGE*/ /*align text and button at center of img*/
+ margin: auto;
+}
+
+.hero-img button { /*HERO IMAGE BUTTON*/ 
+  color: white;
+  background: #BE2026;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 20px;
+  font-weight: 600;
+}
+
+.hero-img h2 { /*HERO IMAGE TEXT*/
+  color: hsl(320, 47%, 81%);
+  font-size: 40px;
+  max-width: 500px;
+}
+
+.hero-img p{ /*HERO IMAGE SUB TEXT*/ 
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.content-one{ /*CONTAINER FOR DESCRIPTION BOXES*/ /*display in a coloumn*/
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.left-info-box { /*RIGHT ALIGNED DESCRIPTION BOXES*/ 
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  box-shadow: 5px 5px 25px #f1eded;
+  width: 90%;
+  margin: auto;
+}
+
+.right-info-box{ /*LEFT ALIGNED DESCRIPTION BOXES*/ 
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.description-left { /*LEFT ALIGNED DESCRIPTION*/
+  padding: 10px;
+  max-width: 30vw;
+  text-align: left;
+}
+
+.description-right { /*RIGHT ALIGNED DESCRIPTION*/
+  padding: 10px;
+  max-width: 30vw;
+  text-align: right;
+
+}
+
+.description-left a, .description-right a { /*LEARN MORE LINKS*/
+  color: #BE2026;
+  font-size: 0.8em;
+}
+
+.icon-set{ /*CONTAINER FOR APPLICATION SET*/ /*display side by side, wrap*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+}
+
+.icon-container { /*CONTAINER FOR INDIVIDUAL ICON + TEXT*/ 
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  width: 100px;
+  height: 90px;
+  max-height: 90px;
+}
+
+.icon-set .icon-container img { /*APPLICATION ICON IMG*/ 
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.icon-set .icon-container p { /*APPLICATION ICON TEXT*/
+  font-size: 8px;
+  font-family: "Segoe UI";
+  padding-bottom: 3px;
+}
+
+.content-two { /*FREE TRIAL CONTAINER*/ /*display content in row*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+	width: 100%;
+  margin: auto;
+  background-color: #BE2026;
+  text-align: center;
+  padding: 30px;
+}
+
+.content-two h2 span { /*FREE TRIAL TEXT*/
+  font-size: 25px;
+  color:  rgb(233, 146, 146);
+}
+
+.col a { /*TRY NOW BUTTON*/
+  text-align: center;
+  margin: auto;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  background-color: #BE2026;
+  margin-bottom: 10px;
+  color: white; 
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.box .col p span{ /*PRICING TEXT*/ 
+  color: #BE2026
+}
+
+.box { /*CONTAINER FOR PLAN COLUMNS*//*display plans side by side*/ 
+  display: flex;
+  flex-direction: row;
+	width: 80%;
+  margin: auto;
+}
+
+.box .col { /*PLAN COLUMNS*/ /*display content under each other*/
+	display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px; 
+  align-items: center;     
+}
+
+ .box .col img { /*PLAN IMAGES*/ 
+	width: 40%;
+  height: auto;
+}
+
+.body-container { /*BODY CONTAINER*/ /*full width*/
+  width: 100%;
+  background-color: #BE2026 ;
+  align-items: center;
+  padding: 40px;
+}
+
+.signup-container { /*SIGN-UP CONTAINER*/ /*Display content under each other, half width of body container*/
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  align-items: center;
+}
+
+.signup-container a{ /*LINKS IN SIGN UP CONTAINER*/
+  color: #BE2026;
+}
+
+.form-control { /*CONTAINER FOR PSW FIELD & TOGGLE PSW BUTTON*/ /*display inline*/
+  display: flex;
+}
+
+.indicator { /*PROGRESS INDICATOR*/ /*display side by side*/
+  display: flex;
+  width: 30%;
+  margin: auto;
+  padding-bottom: 50px;
+  margin-top: 80px; 
+}
+
+.indicator li { /*PROGRESS INDICATOR*/ /*display side by side*/
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  counter-increment: progress;
+}
+
+
+.indicator li+li {  /*PROGRESS INDICATOR*/ /*grow and shrink*/
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+
+.indicator .current-step ~ li { /*PROGRESS INDICATOR*/ /*Make steps not complete less opaque */
+  opacity: .3;
+}
+
+
+.indicator li::after {  /*PROGRESS INDICATOR*/ /*squares*/
+  content: counter(progress);
+  display: inline-block;
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  line-height: 2em;
+  border-radius: 5px;
+  background: white;
+  text-align: center;
+  color: #BE2026;		
+}
+
+.indicator li+li::before { /*PROGRESS INDICATOR*/ /*bars for progress except the first bar*/
+  content: "";
+  flex: 1;
+  display: block; 
+  border-bottom: 2px solid white;
+}
+
+
+.indicator .current-step ~ li::before { /*PROGRESS INDICATOR*/ /*dotted bar to indicate incomplete steps*/
+  border-bottom-style: dotted;
+}
+
+.hide {
+  display: none;}
+
+
+
+label { /*LABELS FOR INPUT FIELDS*/
+  font-weight: 600;
+}
+
+.body-container h1 { /*BODY CONTAINER TITLE*/
+  text-align: center;
+  font-size: 35px;
+  color: rgb(233, 146, 146);
+}
+
+.body-container h3 { /*BODY CONTAINER SUBTITLE*/
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  padding-bottom: 25px;
+}
+
+.form-control button { /*TOGGLE PASSWORD BUTTON*/
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bolder;
+  height: 28px;
+  color: rgb(136, 136, 136);
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-left: 1px;
+}
+
+.tooltip { /*CONTAINER FOR TOOLTIP FOR DOB*/
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  margin: auto; 
+}
+
+.tooltip .tooltip-text { /*TOOLTIP TEXT*/ /*hide text*/
+  visibility: hidden;
+  width: 150px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  font-size: 8px;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+
+.tooltip:hover .tooltip-text { /*TOOLTIP TEXT*/ /*visible on hover*/
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip img { /*TOOLTIP ICON*/
+  width: 11px;
+  height:11px;
+  margin-left: 5px;
+}
+
+#acc-button { /*CREATE ACC BUTTON*/
+  padding: 5px 10px;
+  background-color: #BE2026;
+  color: white;
+  border: 2px solid #BE2026;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  margin: auto;
+  width: 100%
+}
+
+#terms { /*AGREEMENT WHEN CREATING ACC*/
+  font-size: 10px;
+  color: grey;
+  text-align: center;
+}
+
+#validation { /*PSW REQUIREMENTS CONTAINER*/
+  padding:10px 5px;
+}
+
+
+#validation p {  /*PSW REQUIREMENTS TEXT*/
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.valid { /*PSW REQUIREMENTS*/ /*change to green if psw requirements met*/ 
+  color: green;
+}
+
+.valid:before { /*PSW REQUIREMENTS*/ /*change to tick if requirements met*/ 
+  position: relative;
+  left: -15px;
+  content:  "✓";
+}
+
+.invalid { /*PSW REQUIREMENTS/ /*change to grey if requirements not met*/ 
+  color: grey;
+}
+
+.invalid:before { /*PSW REQUIREMENTS/ /*change to cross if if requirements not met*/
+  position: relative;
+  left: -15px;
+  content: "✕" ;
+}
+
+.support { /*SUPPORT CHAT BUTTON*/ /*fix to bottom left corner of page*/
+  background-color: rgb(255, 255, 255);
+  color: #BE2026;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  width: 15%;
+}
+
+.support-popup { /*SUPPORT CHAT POPUP*/ /*hide*/
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  border: 2px solid #f1f1f1;
+  border-radius: 5px;
+  width: 20%;
+}
+
+.popupform { /*SUPPORT CHAT FORM*/ 
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+}
+
+.popupform textarea { /*SUPPORT CHAT TEXT AREA*/ 
+  width: 100%;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 150px;
+  right: 15px;
+  overflow: auto;
+}
+
+.popupform .send {  /*SUPPORT SEND BUTTON*/ 
+  background-color: #BE2026;
+  font-size: 12px;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.popupform .close { /*SUPPORT CLOSE BUTTON*/
+  background-color: white;
+  border: 2px solid #BE2026;
+  color: #BE2026;
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+label { /*FIELD LABELS*/
+  font-size: 12px;
+  color: #BE2026 ;
+}
+
+
+#continue-button, #continue-button2, #continue-button3 {  /*CONTINUE BUTTONS*/
+  display: block;
+  margin-bottom: 5px;
+  opacity: 0;
+  margin: auto;
+  background-color: #BE2026;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+#go-back, #go-back2, #go-back3 { /*GO BACK LINKS*/ 
+  text-align: center;
+  display: none;
+  color: #BE2026;
+  font-size: 10px;
+  background-color: white;
+  text-decoration: underline;
+  padding-top: 10px;
+  font-weight: 700;
+}
+
+#big-arrow { /*ARROW*/
+  font-size: 20px;
+  }
+
+input[type="radio"]:not(:checked)+label{ /*RADIO LABEL*/ /*if radio is not checked label is grey*/
+  filter: grayscale(100%);
+}
+
+#planchoice { /*LABELS FOR PLAN*/
+  text-align: center;
+}
+
+.app-cart-container { /*CONTAINER FOR APP SELECTION + CART*/ /*display side by side*/
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.app-container { /*CONTAINER FOR APPS*/ /*display as a column*/
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin-right: 10px;
+  border-radius: 15px;
+  padding: 10px;
+  align-items: center;
+  text-align: center;}
+
+.app-container h3 { /*APPS TEXT*/
+  color: black;
+}
+
+.all-apps { /*CONTAINER FOR ALL APPS*/
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background-color:white ;
+  }
+
+.all-apps p { /*ALL APPS TEXT*/
+  padding: 0px 10px 0 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cart-container { /*CART CONTAINER*/
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  height: 50%;
+  width: 20%;
+  background-color: rgb(216, 212, 212);
+  }
+
+ .single-apps{ /*SINGLE APPS CONTAINER*/  /*display in grid:  as a row & wrap*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    max-height: 400px;
+    overflow: auto;
+    border-radius: 5px;
+  }
+  
+  .icon2 { /*INDIVIDUAL APPS CONTAINER*/  /*display content in column*/
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 5px;
+    border-radius: 5px;
+    width: 30%; 
+    height: 150px;
+    overflow-wrap: break-word;
+    padding: 10px;
+  }
+
+  .icon2 p {  /*ICONS TEXT*/  
+    font-size: 9px;
+  }
+  
+  .icon2 img, .all-apps img{ /*ICONS IMG*/  
+    width: 30px;
+    height: 30px;
+  }
+  
+  #quote { /*BEST VALUE TEXT*/  
+    color: #BE2026;
+    border-radius: 5px;
+    margin-left: 120px;
+    margin-right: 120px;
+   }
+
+  .cart-container h3 { /*CART CONTAINER TEXT*/  
+    color: black;
+   }
+
+
+#break { /*BREAK UP LINES*/ /*Hide*/
+  display: none;
+}
+
+#prices { /* PRICES TEXT*/ 
+  margin-top: 10px;
+  color: #BE2026;
+  font-weight: 500;
+  padding: 5px;
+}
+
+#today { /* DUE TODAY TEXT*/ 
+  border: 1px solid #BE2026;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.selected { /* CONTAINER TO SHOW SELECTED APPS*/ 
+  border-radius: 5px;
+  padding: 5px;
+  height: 250px;
+  overflow: auto;
+  background-color:white;
+}
+
+#continue {  /* CONTINUE BUTTON*/ 
+  text-align: center;
+  background-color: #BE2026;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  margin: auto;
+  border-radius: 5px;
+}
+
+#arrow { /* ARROW*/ 
+  font-size: 10px;
+}
+
+.cart-container a{  /* GO BACK LINK*/ 
+  font-size: 10px;
+  text-decoration: underline;
+}
+
+.payment-container h3 {  /* SELECT PAYMENT TEXT*/ 
+  color: black;
+}
+
+#nothing {  /* NOTHING TO PAY CONTAINER*/ 
+  text-align: center;
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.payment-container {  /* NOTHING TO PAY CONTAINER*/ /* display items under each other in column*/ 
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+  width: 50%;
+  align-content: center;
+  margin: auto;
+}
+
+.method-container {  /*PAYMENT METHOD CHOICES CONTAINERS*/
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: #BE2026;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+form { /*PAYMENT METHOD CHOICES CONTAINERS*/
+  width: 100%;
+}
+
+.inlineform { /*CONTAINER FOR EXPIRATION & CVV*/ /*display side by side*/
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.inlineform2 { /*CONTAINER FOR MONTH&YEAR SELECTIONS*/ /*display side by side*/
+  display: flex;
+  flex-direction: row;
+}
+
+.formcol { /*CONTAINER FOR LABELS/ /*display side by side*/
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#move { /*ALIGN*/
+  margin-right: 10px;
+}
+
+#paydetails-container { /*PAYMENT DETAILS FORM*/
+  display: none;
+  text-align: left;
+  background-color: white;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  margin: auto;
+}
+
+#lock { /*LOCK ICON*/
+  font-size: 12px;
+}
+
+#norton {  /*NORTON ICON*/
+  width: 10%;
+  margin-left: 500px;
+  padding-top: 20px;
+}
+
+#paypal-button-container { /*PAYPAL BUTTON CONTAINER*/ /*hide*/
+  width: 100%;
+  margin: auto;
+  display: none;
+}
+
+#subtitle1 { /*THANKYOU MESSAGE*/ 
+  padding-top: 150px;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  padding-bottom: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.option {/*OPTIONS CONTAINER*/ 
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.body-container .option h3 {/*OPTIONS TITLE*/ 
+  color: black;
+}
+
+.body-container .option a {/*OPTIONS LINKS*/ 
+  font-size: 12px;
+  font-weight: 500;
+  color: #BE2026;
+}
+
+.page-footer { /*FOOTER*/
+  text-align: center;
+  background: white;
+  padding: 20pxs;
+}
+
+input { /*FORM FEILDS*/
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  max-height: 30px;
+}
+
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 700px) {
+  
+  
+  .header-container {
+    flex-direction: column;
+    margin-top: 0px;
+    padding: 10px 0px 0px 0px;
+  }
+
+  .header-container .sec-links {
+    padding: 10px
+  }
+
+  .header-container ul, #login, #signup {
+    font-size: 0.7em;
+  }
+
+  .hero-img h2 {
+    font-size: 1.4em;
+  }
+
+  .hero-img  {
+    height: 60vh;
+    padding: 20px;
+    margin-top: 90px;
+  }
+
+  #hero-button {
+    font-size: 10px;
+    padding: 10px;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+
+  #big-arrow {
+    font-size: 12px;
+  }
+
+  .left-info-box, .right-info-box {
+    flex-direction: column;
+  }
+
+  .description-left, .description-right {
+    padding: 10px;
+    max-width: 100vw;
+    text-align: center;
+  }
+
+  .content-one h3, .description-left h3, .description-right h3 {
+    font-size: 0.9em;
+  }
+
+  .description-left p, .description-right p {
+    font-size: 0.7em;
+  }
+  
+  .box .col img {
+    width: 20%;
+    height: auto;
+  }
+
+  .box {
+    width: 100%;
+    height: 50%;
+    flex-wrap: wrap;
+  }
+  
+  .body-container .indicator {
+    margin-top: 120px;
+    padding-bottom: 15px;
+  }
+
+  .signup-container {
+    width: 80%;
+    padding: 10px;
+  }
+
+  .body-container #title {
+    font-size: 25px;
+  }
+
+  .body-container #subtitle {
+    font-size: 10px;
+  }
+
+  .app-cart-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .app-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .cart-container {
+    width: 100%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
