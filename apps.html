@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Adobe Creative Cloud</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+  <script src="https://kit.fontawesome.com/c07247ff83.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <!--- HEADER START------------------------->
+  <section>
+    <!--container for header-->
+    <header class="header-container">
+      <!--adobe creative cloud text logo-->
+      <div class="logo">ADOBE CREATIVE CLOUD</div>
+
+      <!--main navigation links (home, plans and pricing, learn, support)-->
+      <div class="main-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#plans">Plans and Pricing</a></li>
+          <li><a href="#about">Learn</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+      </div>
+
+      <!--secondary navigation links (login and sign up) -->
+      <div class="sec-links">
+        <ul>
+          <li><a id="login" href="">Login</a></li>
+          <li><a id="signup" href="createacc.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </header>
+  </section>
+
+  <!---PAGE BODY START ---------------------->
+  <section>
+    <!--container for body -->
+
+    <div class="body-container">
+
+      <!--progress indicator-->
+      <section>
+        <ol class="indicator">
+          <li></li>
+          <li></li>
+          <li class="current-step"></li>
+          <li></li>
+
+        </ol>
+      </section>
+
+      <!--title and subtitle-->
+            <section>
+                <h1>CHOOSE YOUR APPS</h1>
+                <h3>Pay NOTHING for the first 7 days! Cancel Anytime.</h3>
+            </section>
+
+            <!--container for app selection comtainer and cart container-->
+            <section>
+            <div class="app-cart-container">
+
+
+                <!--container to hold all apps and single app plans-->
+                <div class="app-container">
+
+                    <!-- container for all apps-->
+                    <form action="/action_page.php">
+                        <h3>Select All Apps</h3>
+                        <div class="all-apps">
+                            <input type="checkbox" id="All Apps - A$76.99/month" name="all-apps" value="76.99"
+                                onclick="check()">
+                            <img src="cc.png">
+                            <p>$76.99/mo</p>
+                            <p id="quote">BEST VALUE!</p>
+                            <p>The entire collection of 20+ creative desktop and mobile apps.</p>
+                        </div>
+
+
+                        <!--container for single apps-->
+                        <br>
+                        <h3>Select Single App(s)</h3>
+                        <div class="single-apps">
+
+                            <!--container for photoshop-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Photoshop - A$29.99/mo" name="app" value=29.99
+                                    onclick="check()">
+                                <img src="photoshop.png" alt="photoshop">
+                                <h4>Photoshop</h4>
+                                <p>Image editing and compositing</p>
+                                <p>A$29.99/month</p>
+                            </div>
+                            <!--container for illustrator-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Illustrator - A$29.99/month" name="app" value="29.99"
+                                    onclick="check()">
+                                <img src="illustrator.png" alt="illustrator">
+                                <h4>Illustrator</h4>
+                                <p>Vector Graphics and Illustration</p>
+                                <p>A$29.99/month</p>
+                            </div>
+                            <!--container for indeign-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Indesign  - A$29.99/month" name="app" value="29.99"
+                                    onclick="check()">
+                                <img src="Indesign.png" alt="indesign">
+                                <h4>Indesign</h4>
+                                <p>Page design and layout for print and digital publishing</p>
+                                <p>A$29.99/month</p>
+                            </div>
+
+                            <!--container for adobe xd-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Adobe XD  - A$14.29/month" name="app" value="14.29"
+                                    onclick="check()">
+                                <img src="xd.jpg" alt="xd">
+                                <h4>Adobe XD</h4>
+                                <p>Design, protoype and share user experiences.</p>
+                                <p>A$14.29/month</p>
+
+                            </div>
+                            <!--container for lightroom-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Lightroom - A$14.29/month" name="app" value="14.29"
+                                    onclick="check()">
+                                <img src="lightroom.png" alt="lightroom">
+                                <h4>Lightroom</h4>
+                                <p>The cloud-based photo service.</p>
+                                <p>A$14.29/month</p>
+                            </div>
+
+                            <!--container for acrobat-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Acrobat - A$21.99/month" name="app" value="21.99"
+                                    onclick="check()">
+                                <img src="acrobat.png" alt="acrobat">
+                                <h4>Acrobat</h4>
+                                <p>The complete PDF solution for working anywhere.</p>
+                                <p>A$21.99/month</p>
+                            </div>
+                            <!--container for dreamweaver-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Dreamweaver - $A29.99/month" name="app" value="29.99"
+                                    onclick="check()">
+                                <img src="dreamweaver.png" alt="dreamweaver">
+                                <h4>Dreamweaver</h4>
+                                <p>Design and develop modern, responsive websites.</p>
+                                <p>A$29.99/month</p>
+
+                            </div>
+                            <!--container for animate-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Animate - A$29.99/month" name="app" value="29.99"
+                                    onclick="check()">
+                                <img src="animate.jpg" alt="animate">
+                                <h4>Animate</h4>
+                                <p>Design interactive vector animations for multiple platforms.
+                                </p>
+                                <p>A$29.99/month</p>
+
+                            </div>
+                            <!--container for premiere pro-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Premiere Pro - A$29.99/month" name="app" value="29.99"
+                                    onclick="check()">
+                                <img src="premire.jpg" alt="premiere">
+                                <h4>Premiere Pro</h4>
+                                <p>Industry-standard pro video and film editing.</p>
+                                <p>A$29.99/month</p>
+
+                            </div>
+                            <!--container for premiere rush-->
+                            <div class="icon2">
+                                <input type="checkbox" id=" Premiere Rush - A$14.29/month" name="app" value="14.29"
+                                    onclick="check()">
+                                <img src="rush.png" alt="rush">
+                                <h4>Premiere Rush</h4>
+                                <p>Create and share online videos anywhere.</p>
+                                <p>A$14.29/month</p>
+
+                            </div>
+                            <!--container for aftereffects-->
+                            <div class="icon2">
+                                <input type="checkbox" id="After Effects - A$29.99/month" name="app" value="29.99"
+                                    onclick="check()">
+                                <img src="aftereffects.png" alt="after effects">
+                                <h4>After Effects</h4>
+                                <p>Cinematic visual effects and motion graphics.</p>
+                                <p>A$29.99/month</p>
+
+                            </div>
+                            <!--container for spark-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Adobe Spark - A$14.29/month" name="app" value="14.29"
+                                    onclick="check()">
+                                <img src="spark.png" alt="spark">
+                                <h4>Adobe Spark</h4>
+                                <p>Create video stories in minutes.</p>
+                                <p>A$14.29/month</p>
+
+                            </div>
+                            <!--container for dimension-->
+                            <div class="icon2">
+                                <input type="checkbox" id="Dimension - A$29.99/month" name="app" value="29.99"
+                                    onclick="check()">
+                                <img src="dimension.jpg" alt="dimension">
+                                <h4>Dimension</h4>
+                                <p>
+                                    Create photorealistic 3D images for branding, product shots, and package design.</p>
+                                <p>A$29.99/month</p>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!--container for cart-->
+                <div class="cart-container">
+                    <h3>Cart Summary</h3>
+                    <div class="selected">
+                        <p id="order">None Selected</p>
+                    </div>
+                    <p id="break"><br><br></p>
+                    <p id="prices">Total Price: $0.00 per month</p>
+                    <p id="today">Due today: $0.00</p>
+                    <br>
+                    <form action="payment.html"><button type="submit" id="continue">Continue <i id="arrow"
+                                class="fas fa-arrow-circle-right"></i></button></form>
+                    <a href="plan.html">go back</a>
+                </div>
+
+            </div>
+
+            </section>
+
+            <!--live support-->
+            <section>
+
+                <button class="support" onclick="openSupport()"> <i class="fas fa-headset"></i>
+                    <p>Need Help? Chat Now</p>
+                </button>
+
+                <div class="support-popup" id="popForm">
+                    <form action="/action_page.php" class="popupform">
+                        <label for="msg">How can we help?</label>
+                        <textarea placeholder="Type message here.." name="msg" required></textarea>
+                        <button type="submit" class="send">Chat Now</button>
+                        <button type="button" class="close" onclick="closeSupport()">Close</button>
+                    </form>
+
+            </section>
+
+        </div>
+
+
+        <!---FOOTER START ---------------------->
+        <section>
+        <footer class="page-footer">
+            <p>© Copyright 2018. All rights reserved.</p>
+        </footer>
+
+    </section>
+</body>
+
+
+<script>
+
+    //function to get cart summary
+    //check if an application is checked and print in cart + count the number of apps selected
+    function check() {
+        var cart = document.forms[0];
+        var count = 0;
+        var text = " ";
+        var i;
+        sum = 0;
+        var a = document.getElementById("break").innerHTML
+        for (i = 0; i < cart.length; i++) {
+            if (cart[i].checked) {
+                count = count + 1;
+                text = text + count + " " + cart[i].id + " " + a;
+                sum = sum + parseFloat(cart[i].value);
+            }
+        }
+        document.getElementById("order").innerHTML = text;
+        document.getElementById("prices").innerHTML = "Total Price: $" + sum + " per month";
+    }
+
+
+
+    //function to open popup support form
+    function openSupport() {
+        document.getElementById("popForm").style.display = "block";
+    }
+    //function to close popup support form
+
+    function closeSupport() {
+        document.getElementById("popForm").style.display = "none";
+    }
+
+
+
+</script>
+
+</body>
+
+</html>
