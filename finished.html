@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Adobe Creative Cloud</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+    <script src="https://kit.fontawesome.com/c07247ff83.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <!--- HEADER START------------------------->
+    <section>
+        <!--container for header-->
+        <header class="header-container">
+            <!--adobe creative cloud text logo-->
+            <div class="logo">ADOBE CREATIVE CLOUD</div>
+
+            <!--main navigation links (home, plans and pricing, learn, support)-->
+            <div class="main-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#plans">Plans and Pricing</a></li>
+                    <li><a href="#about">Learn</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+
+            <!--secondary navigation links (login and sign up) -->
+            <div class="sec-links">
+                <ul>
+                    <li><a id="login" href="">Login</a></li>
+                    <li><a id="signup" href="createacc.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </header>
+    </section>
+
+    <!---PAGE BODY START ---------------------->
+    <section>
+        <!--container for body -->
+
+        <div class="body-container">
+            <!--title-->
+            <h3 id="subtitle1">Thankyou for signing up.</h3>
+            <h1 id="title">WELCOME TO THE CLOUD.</h1>
+            <br> <br>
+
+            <!--links-->
+
+            <div class="option">
+                <h3>Start your free trial</h3>
+                <a href="#">go to product downloads →</a> 
+            </div>
+
+            <div class="option"><h3>Learn how to use the apps</h3>
+                <a href="#">go to product tours →</a></div>
+
+
+            <!--live support-->
+            <section>
+
+                <button class="support" onclick="openSupport()"> <i class="fas fa-headset"></i>
+                    <p>Need Help? Chat Now</p>
+                </button>
+
+                <div class="support-popup" id="popForm">
+                    <form action="/action_page.php" class="popupform">
+                        <label for="msg">How can we help?</label>
+                        <textarea placeholder="Type message here.." name="msg" required></textarea>
+                        <button type="submit" class="send">Chat Now</button>
+                        <button type="button" class="close" onclick="closeSupport()">Close</button>
+                    </form>
+
+            </section>
+
+        </div>
+
+        <!---FOOTER START ---------------------->
+
+        <footer class="page-footer">
+            <p>© Copyright 2018. All rights reserved.</p>
+        </footer>
+
+
+</body>
+
+
+<script>
+    document.getElementById("name").innerHTML = localStorage.getItem("full-name");
+</script>
+
+</html>
