@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Adobe Creative Cloud</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://kit.fontawesome.com/c07247ff83.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--- HEADER START------------------------->
+    <section>
+        <!--container for header-->
+        <header class="header-container">
+            <!--adobe creative cloud text logo-->
+            <div class="logo">ADOBE CREATIVE CLOUD</div>
+
+            <!--main navigation links (home, plans and pricing, learn, support)-->
+            <div class="main-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#plans">Plans and Pricing</a></li>
+                    <li><a href="#about">Learn</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+
+            <!--secondary navigation links (login and sign up) -->
+            <div class="sec-links">
+                <ul>
+                    <li><a id="login" href="">Login</a></li>
+                    <li><a id="signup" href="createacc.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </header>
+    </section>
+
+    <!---PAGE BODY START ---------------------->
+    <section>
+    <!--container for body -->
+
+    <div class="body-container">
+        
+        <!--progress indicator-->
+        <section>
+            <ol class="indicator">
+                <li class="current-step"></li>
+                <!--step 1/4-->
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </section>
+
+        <!--title and subtitle -->
+        <section>
+        <h1>CREATE YOUR ACCOUNT</h1>
+        <h3> Get 7 Days Free Access to the world's best creative tools.</h3>
+        </section>
+        
+        <!--create account form-->
+        <section>
+        <div class="signup-container">
+            
+            <!--link for already have an acc-->
+            <p>Already have an account? <a href="">Sign in</a></p> <br>
+     
+            <!--Create Account Form  -->
+            <form method="POST" action="/action_page.php">
+                <!--email address label & field-->
+                <label for="email-address">Email Adresss</label>
+                <input type="email" id="email-address" autofocus required />
+
+                <!--full name label & field-->
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" required/>
+
+                <!--DOB label with tooltip & field -->
+                <!--container for DOB label and tooltip icon-->
+                <div class="inline-label">
+                    <label for="dob">Date of Birth</label>
+                    <div class="tooltip">
+                        <img src="qmark.png" alt="question mark" />
+                        <span class="tooltip-text">We collect your date of birth for account authentication and
+                            recovery purposes, and to ensure age-appropriate access to
+                            content. Adobe values your privacy and trust.
+                        </span>
+                    </div>
+                </div>
+                <input type="date" id="dob" required />
+
+                <!--Passsowrd label and field -->
+                <label for="psw">Password</label>
+                <!--container for password field and hide/show password buton-->
+                <div class="form-control">
+                    <input onkeyup="validatePassword(); capsWarning()" type="password" id="psw" name="psw"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+                    <button type="button" onclick="hidePassword(); toggleButton()">
+                        <div id="button-text">Show</div>
+                    </button>
+                </div>
+
+                <!--container for password requirements-->
+                <div id="validation">
+                    <p id="uppercase" class="invalid"> Use an <b>uppercase</b> letter (e.g. ABC)</p>
+                    <p id="number" class="invalid">Use a <b>number</b> (e.g. 1234)</p>
+                    <p id="length" class="invalid">Use <b>8 or more characters</b></p>
+                </div>
+
+                <!--create account button-->
+                <a href="plan.html">
+                    <button id="acc-button" type="submit">
+                        Create Account Now <i id="lock" class="fas fa-lock"></i>
+                    </button></a>
+            </form>
+
+            <!--terms and conditions-->
+            <p id="terms">
+                By clicking Create Account, you agree to our
+                <a href="">License Agreement</a> and <a href="">Privacy Statement</a>.
+            </p>
+            <br/>
+        </div>
+        </section>
+
+        <!--live support-->
+        <section>
+
+        <button class="support" onclick="openSupport()"> <i class="fas fa-headset"></i>
+            <p>Need Help? Chat Now</p></button>
+
+        <div class="support-popup" id="popForm">
+          <form action="/action_page.php" class="popupform">
+            <label for="msg">How can we help?</label>
+            <textarea placeholder="Type message here.." name="msg" required></textarea>
+            <button type="submit" class="send">Chat Now</button>
+            <button type="button" class="close" onclick="closeSupport()">Close</button>
+          </form>
+
+        </section>
+   
+    </div>
+
+    </section>
+
+    <!---FOOTER START ---------------------->
+    <section>
+    <footer class="page-footer">
+        <p>© Copyright 2018. All rights reserved.</p>
+    </footer>
+    </section> 
+
+</body>
+
+<script>
+
+    // function to hide and show password
+    function hidePassword() { // if password type matches "password" change type to "text"
+        var password = document.getElementById("psw");
+        if (password.type === "password") {
+            password.type = "text";
+        } else {
+            password.type = "password";
+        }
+    }
+
+    // function to toggle text
+    function toggleButton() { // if button text matches "Show" change type to "Hide"
+        var text = document.getElementById("button-text");
+        if (text.innerHTML === "Show") {
+            text.innerHTML = "Hide";
+        } else {
+            text.innerHTML = "Show";
+        }
+    }
+
+    // function to validate password
+    function validatePassword() { // if password value matches requirements, toggle to valid class. 
+        var Input = document.getElementById("psw");
+        var up = document.getElementById("uppercase");
+        var no= document.getElementById("number");
+        var length = document.getElementById("length");
+        var upperCaseLetters = /[A-Z]/g;
+        var numbers = /[0-9]/g;
+
+        if (Input.value.match(upperCaseLetters)) { 
+            up.classList.remove("invalid");
+            up.classList.add("valid");
+        } else {
+            up.classList.remove("valid");
+            up.classList.add("invalid");
+        }
+
+        if (Input.value.match(numbers)) {
+            no.classList.remove("invalid");
+            no.classList.add("valid");
+        } else {
+            no.classList.remove("valid");
+            no.classList.add("invalid");
+        }
+
+        if (Input.value.length >= 8) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+        } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+        }
+    }
+
+    //function to open popup support form
+    function openSupport() {
+  document.getElementById("popForm").style.display = "block";
+}
+    //function to close popup support form
+
+function closeSupport() {
+  document.getElementById("popForm").style.display = "none";
+}
+</script>
+
+</html>
