@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Adobe Creative Cloud</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://kit.fontawesome.com/c07247ff83.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--- HEADER START------------------------->
+    <section>
+        <!--container for header-->
+        <header class="header-container">
+            <!--adobe creative cloud text logo-->
+            <div class="logo">ADOBE CREATIVE CLOUD</div>
+
+            <!--main navigation links (home, plans and pricing, learn, support)-->
+            <div class="main-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#plans">Plans and Pricing</a></li>
+                    <li><a href="#about">Learn</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+
+            <!--secondary navigation links (login and sign up) -->
+            <div class="sec-links">
+                <ul>
+                    <li><a id="login" href="">Login</a></li>
+                    <li><a id="signup" href="createacc.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </header>
+    </section>
+
+    <!---PAGE BODY START ---------------------->
+    <section>
+        <!--container for body -->
+
+        <div class="body-container">
+
+            <!--progress indicator-->
+            <section>
+                <ol class="indicator">
+                    <li></li>
+                    <li class="current-step"></li>
+                    <!--step 2/4-->
+                    <li></li>
+                    <li></li>
+                </ol>
+            </section>
+
+            <!--title and subtitle-->
+            <section>
+                <h1>CHOOSE A PLAN</h1>
+                <h3>There's a plan for everyone.</h3>
+            </section>
+
+            <!---Container for plan chocies -->
+            <section>
+
+                <div class="box">
+
+                    <!--plan box for individual-->
+
+                    <div class="col">
+                        <input type="radio" name="plan" id="individual" value="individual" onclick="show();" />
+                        <label id="planchoice" for="individual">
+                            <h2>Individuals</h2>
+                            <img src="individual.jpg" alt="Individuals" />
+                        </label>
+                        <form action="apps.html">
+                            <button type="submit" id="continue-button">Continue <i id="arrow"
+                                    class="fas fa-arrow-circle-right"></i></button> </form>
+                        <a id="go-back" href="createacc.html"> go back to create account </a>
+                    </div>
+
+                    <!--plan box for students and teachers-->
+                    <div class="col">
+                        <input type="radio" name="plan" id="students-and-teachers" value="Students and Teachers"
+                            onclick="show2();" />
+                        <label id="planchoice" for="students-and-teachers">
+                            <h2>Students and Teachers</h2>
+                            <img src="edu.jpg" alt="Students and Teachers" />
+                        </label>
+                        <form action="apps.html"><button type="submit" id="continue-button2">Continue <i id="arrow"
+                                    class="fas fa-arrow-circle-right"></i></button></form>
+                        <a id="go-back2" href="createacc.html"> go back to create account</a>
+                    </div>
+
+                    <!--plan box for business-->
+                    <div class="col">
+                        <input type="radio" name="plan" id="business" value="Business" onclick="show3();" />
+                        <label id="planchoice" for="business">
+                            <h2>Business</h2> <img src="business.jpg" alt="University" />
+                        </label>
+                        <form action="apps.html"><button type="submit" id="continue-button3">Continue <i id="arrow"
+                                    class="fas fa-arrow-circle-right"></i></button></form>
+                        <a id="go-back3" href="createacc.html">go back to create account </a>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+            <!--live support-->
+            <section>
+
+                <button class="support" onclick="openSupport()"> <i class="fas fa-headset"></i>
+                    <p>Need Help? Chat Now</p>
+                </button>
+
+                <div class="support-popup" id="popForm">
+                    <form action="/action_page.php" class="popupform">
+                        <label for="msg">How can we help?</label>
+                        <textarea placeholder="Type message here.." name="msg" required></textarea>
+                        <button type="submit" class="send">Chat Now</button>
+                        <button type="button" class="close" onclick="closeSupport()">Close</button>
+                    </form>
+
+            </section>
+
+        </div>
+
+        <!---FOOTER START ---------------------->
+
+        <footer class="page-footer">
+            <p>© Copyright 2018. All rights reserved.</p>
+        </footer>
+</body>
+
+
+<script>
+
+    //function to show continue button for individal choice
+    function show() {
+        var button = document.getElementById("continue-button");
+        var button2 = document.getElementById("continue-button2");
+        var button3 = document.getElementById("continue-button3");
+        var back = document.getElementById("go-back");
+        var back2 = document.getElementById("go-back2");
+        var back3 = document.getElementById("go-back3");
+        if (document.getElementById("individual").checked == true) {
+            button.style.opacity = "1";
+            button2.style.opacity = "0";
+            button3.style.opacity = "0";
+            back.style.display = "block";
+            back2.style.display = "none";
+            back3.style.display = "none";
+        } else {
+            button.style.opacity = "0";
+        }
+    }
+
+    //function to show continue button for student and teachers choice
+    function show2() {
+        var button = document.getElementById("continue-button");
+        var button2 = document.getElementById("continue-button2");
+        var button3 = document.getElementById("continue-button3");
+        var back = document.getElementById("go-back");
+        var back2 = document.getElementById("go-back2");
+        var back3 = document.getElementById("go-back3");
+        if (document.getElementById("students-and-teachers").checked == true) {
+            button.style.opacity = "0";
+            button2.style.opacity = "1";
+            button3.style.opacity = "0";
+            back.style.display = "none";
+            back2.style.display = "block";
+            back3.style.display = "none";
+        } else {
+            button.style.opacity = "0";
+        }
+    }
+
+    //function to show continue button for business choice
+    function show3() {
+        var button = document.getElementById("continue-button");
+        var button2 = document.getElementById("continue-button2");
+        var button3 = document.getElementById("continue-button3");
+        var back = document.getElementById("go-back");
+        var back2 = document.getElementById("go-back2");
+        var back3 = document.getElementById("go-back3")
+        if (document.getElementById("business").checked == true) {
+            button.style.opacity = "0";
+            button2.style.opacity = "0";
+            button3.style.opacity = "1";
+            back.style.display = "none";
+            back2.style.display = "none";
+            back3.style.display = "block";
+        } else {
+            button.style.opacity = "0";
+        }
+    }
+
+    //function to open popup support form
+    function openSupport() {
+        document.getElementById("popForm").style.display = "block";
+    }
+    //function to close popup support form
+
+    function closeSupport() {
+        document.getElementById("popForm").style.display = "none";
+    }
+
+
+</script>
+
+</html>
